@@ -3,7 +3,7 @@
   "description": "Learning how to manage disaster recovery for your Kubernetes cluster resources and persistent volumes",
   "details": {
     "steps": [
-      { "title": "Launch Kubernetes Cluster", "code": "foreground.sh", "text": "step1.md" },
+      { "title": "Launch Kubernetes Cluster", "code": "step1.sh", "text": "step1.md" },
       { "title": "Set Up Our Environment", "text": "step2.md" },
       { "title": "Back Up Our Resource", "text": "step3.md" },
       { "title": "Restore Our Resource", "text": "step4.md" }
