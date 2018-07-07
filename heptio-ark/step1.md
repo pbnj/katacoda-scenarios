@@ -1,2 +1,0 @@
-- Launch the Kubernetes cluster: `launch.sh`{{execute}}
-- Make sure it's ready: `kubectl cluster-info`{{execute}}
