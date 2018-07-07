@@ -5,7 +5,7 @@ Let's download and install the Ark client:
 
 Let's backup any resource with labels "app=nginx": `ark backup create nginx-backup --selector app=nginx`{{execute}}
 
-Now, let's simulate a disaster: `kubectl delete namespace nginx-example`
+Now, let's simulate a disaster: `kubectl delete namespace nginx-example`{{execute}}
 
 Check that the nginx service and deployment are gone:
 
