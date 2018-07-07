@@ -1,1 +1,1 @@
-sleep 1; launch.sh
+launch.sh
