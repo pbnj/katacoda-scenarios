@@ -1,6 +1,6 @@
 {
   "title": "Heptio Ark",
-  "description": "Learning how to manage disaster recovery for your Kubernetes cluster resources and persistent volumes",
+  "description": "Learn how to manage disaster recovery for your Kubernetes cluster resources and persistent volumes",
   "details": {
     "steps": [
       { "title": "Set Up our Environment", "code": "step1.sh", "text": "step1.md" },
