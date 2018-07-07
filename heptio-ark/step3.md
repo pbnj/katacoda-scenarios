@@ -1,6 +1,6 @@
+Run: `ark restore create --from-backup nginx-backup`{{execute}}
 
-- Run: `ark restore create --from-backup nginx-backup`{{execute}}
-- Run: `ark restore get`{{execute}}
+Run: `ark restore get`{{execute}}
 
 NOTE: The restore can take a few moments to finish. During this time, the STATUS column reads InProgress.
 
