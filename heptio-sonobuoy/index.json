@@ -1,0 +1,22 @@
+{
+  "title": "Heptio Sonobuoy",
+  "description": "",
+  "details": {
+    "steps": [
+      { "title": "Set Up Our Environment", "code": "step1.sh", "text": "step1.md" },
+      { "title": "Explore Sonobuoy", "text": "step2.md" }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
