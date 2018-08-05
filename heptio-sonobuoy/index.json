@@ -1,6 +1,6 @@
 {
   "title": "Heptio Sonobuoy",
-  "description": "",
+  "description": "Diagnose and test your Kubernetes clusters by running a set of conformance tests in an accessible and non-destructive manner",
   "details": {
     "steps": [
       { "title": "Set Up Our Environment", "code": "step1.sh", "text": "step1.md" },
