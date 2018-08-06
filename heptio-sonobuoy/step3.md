@@ -1,11 +1,5 @@
-Run: `ark restore create --from-backup nginx-backup`{{execute}}
+To view the results, we must first copy the results from the main Sonobuoy pod to somewhere locally: `sonobuoy retrieve .`{{execute}}
 
-Run: `ark restore get`{{execute}}
+Now that we have copied the `.tar.gz` snapshot from the Sonobuoy pod into our local `.` directory, we can extract the contents into `./results`: `mkdir ./results; tar xzvf *.tar.gz -C ./results`{{execute}}
 
-NOTE: The restore can take a few moments to finish. During this time, the STATUS column reads InProgress.
-
-After a successful restore, the STATUS column is Completed, and WARNINGS and ERRORS are 0. All objects in the nginx-example namespace should be just as they were before you deleted them.
-
-If there are errors or warnings, you can look at them in detail:
-
-`ark restore describe <RESTORE_NAME>`
+For more information on the contents of the snapshot, see the [snapshot documentation](https://github.com/heptio/sonobuoy/blob/master/docs/snapshot.md)

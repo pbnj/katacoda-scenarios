@@ -4,7 +4,11 @@
   "details": {
     "steps": [
       { "title": "Set Up Our Environment", "code": "step1.sh", "text": "step1.md" },
-      { "title": "Explore Sonobuoy", "text": "step2.md" }
+      { "title": "Explore Sonobuoy", "text": "step2.md" },
+      { "title": "View Sonobuoy Results", "text": "step3.md" },
+      { "title": "Sonobuoy Plugin Model", "text": "step4.md" },
+      { "title": "Demo Sonobuoy Plugin", "text": "step5.md" },
+      { "title": "Cleanup", "text": "step6.md" }
     ],
     "intro": {
       "text": "intro.md"
