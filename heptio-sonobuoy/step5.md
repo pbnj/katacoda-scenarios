@@ -33,4 +33,6 @@ extra-volumes:
 EOF
 ```{{execute}}
 
-Now, let's run it: `kubectl apply -f $HOME/.sonobuoy`
+Now, this plugin will run you invoke: `sonobuoy run`{{execute}}
+
+For more information on Sonobuoy plugins, see the [documentation](https://github.com/heptio/sonobuoy/blob/master/docs/plugins.md)
