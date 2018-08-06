@@ -1,9 +1,0 @@
-{
-  "title": "Heptio Ark",
-  "description": "Learn how to manage disaster recovery for your Kubernetes cluster resources and persistent volumes",
-  "courses": [{
-    "link": "/petermbenjamin/scenarios/heptio-ark",
-    "title": "Heptio Ark",
-    "description": "Learn how to manage disaster recovery for your Kubernetes cluster resources and persistent volumes"
-  }]
-}
