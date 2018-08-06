@@ -2,7 +2,10 @@ Let's write a custom Sonobuoy plugin that targets a specific E2E test!
 
 First, create the home directory for our plugin: `mkdir -p $HOME/.sonobuoy/plugins.d`{{execute}}
 
-Second, let's create the plugin's YAML config: `cat <<EOF >$HOME/.sonobuoy/plugins.d/e2e-focus.yaml
+Second, let's create the plugin's YAML config:
+
+```
+cat <<EOF >$HOME/.sonobuoy/plugins.d/e2e-focus.yaml
 
 ---
 sonobuoy-config:
@@ -27,6 +30,7 @@ extra-volumes:
   hostPath:
     # directory location on host
     path: /data
-EOF`{{execute}}
+EOF
+```{{execute}}
 
 Now, let's run it: `kubectl apply -f $HOME/.sonobuoy`
