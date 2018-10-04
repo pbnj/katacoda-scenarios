@@ -1,8 +1,8 @@
 Take a moment to explore the different Sonobuoy CLI commands and options: `sonobuoy help`{{execute}}
 
-To deploy a Sonobuoy pod to our cluster with: `sonobuoy run --mode=Quick`{{execute}}
+To deploy the latest version of Sonobuoy pods to our cluster: `sonobuoy run --mode=Quick --sonobuoy-image gcr.io/heptio-images/sonobuoy:latest`{{execute}}
 
-**Note:** Sonobuoy conformance tests may take upwards of 60 minutes to complete. Katacoda scenarios have a shorter time limit, hence the quick mode.
+**Note:** Sonobuoy conformance tests may take upwards of 60 minutes to complete, but Katacoda scenarios have a shorter life span, hence the `Quick` mode.
 
 To view actively running pods: `sonobuoy status`{{execute}}
 
