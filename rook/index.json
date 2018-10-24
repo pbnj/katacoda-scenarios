@@ -3,12 +3,7 @@
   "description": "Learn how to deploy, administer, and consume storage on Kubernetes",
   "details": {
     "steps": [
-      { "title": "Set Up Our Environment", "code": "step1.sh", "text": "step1.md" },
-      { "title": "", "text": "step2.md" },
-      { "title": "", "text": "step3.md" },
-      { "title": "", "text": "step4.md" },
-      { "title": "", "text": "step5.md" },
-      { "title": "", "text": "step6.md" }
+      { "title": "Set Up Our Environment", "code": "step1.sh", "text": "step1.md" }
     ],
     "intro": {
       "text": "intro.md"
