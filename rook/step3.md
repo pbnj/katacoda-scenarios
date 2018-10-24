@@ -1,6 +1,9 @@
 If you would like to view a Rook dashboard:
 
-1. First, create an NodePort service: `cat <<EOF >rook-dashboard.yaml
+1. First, create an NodePort service:
+
+```
+cat <<EOF >rook-dashboard.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -21,7 +24,10 @@ spec:
     rook_cluster: rook-ceph
   sessionAffinity: None
   type: NodePort
-EOF`{{execute}}
+EOF
+```{{execute}}
+
 1. Apply the service: `kubectl apply -f rook-dashboard.yaml`{{execute}}
+
 1. Hit https://2886795303-30000-cykoria01.environments.katacoda.com
   - or, click on the "+" tab icon, click on "select port to view on Host 1", enter port "30000".
