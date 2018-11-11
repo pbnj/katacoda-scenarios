@@ -3,12 +3,13 @@
   "description": "Learn how to manage disaster recovery for your Kubernetes cluster resources and persistent volumes",
   "details": {
     "steps": [
-      { "title": "Set Up our Environment", "code": "step1.sh", "text": "step1.md" },
+      { "title": "Set Up our Environment", "text": "step1.md" },
       { "title": "Back Up Our Resources", "text": "step2.md" },
       { "title": "Restore Our Resources", "text": "step3.md" }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
