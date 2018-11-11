@@ -5,14 +5,20 @@
     "steps": [
       {
         "title": "Set Up Our Environment",
-        "code": "step1.sh",
         "text": "step1.md"
       },
-      { "title": "Deploy Rook", "text": "step2.md" },
-      { "title": "Rook Dashboard", "text": "step3.md" }
+      {
+        "title": "Deploy Rook",
+        "text": "step2.md"
+      },
+      {
+        "title": "Rook Dashboard",
+        "text": "step3.md"
+      }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -21,7 +27,12 @@
   "environment": {
     "uilayout": "terminal",
     "showdashboard": true,
-    "dashboards": [{ "name": "Rook Dashboard", "port": 30000 }]
+    "dashboards": [
+      {
+        "name": "Rook Dashboard",
+        "port": 30000
+      }
+    ]
   },
   "backend": {
     "imageid": "kubernetes"
