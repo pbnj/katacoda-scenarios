@@ -6,13 +6,12 @@
     "steps": [
       {
         "title": "Environment Setup",
-        "text": "step1.md",
-        "code": "step1.sh"
+        "text": "step1.md"
       }
     ],
     "intro": {
       "text": "intro.md",
-      "credits": "Kelsey Hightower"
+      "code": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
