@@ -1,0 +1,28 @@
+{
+  "title": "Kubernetes The Hard Way",
+  "description": "Based on Kelsey Hightower's Kubernetes The Hard Way repository",
+  "difficulty": "advanced",
+  "details": {
+    "steps": [
+      {
+        "title": "Environment Setup",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": "Kelsey Hightower",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
