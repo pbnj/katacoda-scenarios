@@ -4,3 +4,5 @@
 `git clone https://github.com/vitessio/vitess`{{execute}}
 
 `apt update && apt install -y mysql-client`{{execute}}
+
+`helm init`{{execute}}
