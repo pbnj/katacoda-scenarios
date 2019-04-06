@@ -1,5 +1,5 @@
 {
-  "title": "Heptio Ark",
+  "title": "Heptio Velero",
   "description": "Learn how to manage disaster recovery for your Kubernetes cluster resources and persistent volumes",
   "details": {
     "steps": [

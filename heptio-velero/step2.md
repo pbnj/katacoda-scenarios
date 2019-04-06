@@ -1,10 +1,10 @@
-Let's download and install the Ark client:
+Let's download and install the Velero client:
 
-`curl -LO https://github.com/heptio/ark/releases/download/v0.9.0/ark-v0.9.0-linux-amd64.tar.gz`{{execute}}
+`curl -LO https://github.com/heptio/velero/releases/download/v0.11.0/velero-v0.11.0-linux-amd64.tar.gz`{{execute}}
 
-`tar -C /usr/local/bin -xzvf ark-v0.9.0-linux-amd64.tar.gz`{{execute}}
+`tar -C /usr/local/bin -xzvf velero-v0.11.0-linux-amd64.tar.gz`{{execute}}
 
-Let's backup any resource with labels "app=nginx": `ark backup create nginx-backup --selector app=nginx`{{execute}}
+Let's backup any resource with labels "app=nginx": `velero backup create nginx-backup --selector app=nginx`{{execute}}
 
 Now, let's simulate a disaster: `kubectl delete namespace nginx-example`{{execute}}
 
