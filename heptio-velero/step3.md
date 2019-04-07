@@ -1,6 +1,6 @@
-Run: `ark restore create --from-backup nginx-backup`{{execute}}
+Run: `velero restore create --from-backup nginx-backup`{{execute}}
 
-Run: `ark restore get`{{execute}}
+Run: `velero restore get`{{execute}}
 
 NOTE: The restore can take a few moments to finish. During this time, the STATUS column reads InProgress.
 
@@ -8,4 +8,4 @@ After a successful restore, the STATUS column is Completed, and WARNINGS and ERR
 
 If there are errors or warnings, you can look at them in detail:
 
-`ark restore describe <RESTORE_NAME>`
+`velero restore describe <RESTORE_NAME>`
