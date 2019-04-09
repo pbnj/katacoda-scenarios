@@ -6,7 +6,7 @@ Apply a local storage service (e.g. Minio): `kubectl apply -f velero/examples/mi
 
 Deploy an example nginx application: `kubectl apply -f velero/examples/nginx-app/base.yaml`{{execute}}
 
-Check to see that both Ark and nginx deployments have been successfully created:
+Check to see that both Velero and nginx deployments have been successfully created:
 
 `kubectl get deployments -l component=velero --namespace=velero`{{execute}}
 
