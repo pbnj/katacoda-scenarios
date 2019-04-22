@@ -1,4 +1,4 @@
-Let's create our first cluster: `kind create cluster`
+Let's create our first cluster: `kind create cluster`{{execute}}
 
 After a few seconds, we should have our first cluster!
 
