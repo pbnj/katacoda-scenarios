@@ -6,7 +6,8 @@ Well, `kind` allows us to configure our clusters via a YAML configuration file.
 
 Let's define our cluster:
 
-`cat <<EOF > kind-1
+```
+cat <<EOF > kind-1
 kind: Cluster
 apiVersion: kind.sigs.k8s.io/v1alpha3
 nodes:
@@ -14,6 +15,7 @@ nodes:
 - role: worker
 - role: worker
 - role: worker
-EOF`{{execute}}
+EOF
+```{{execute}}
 
 Now, let's create our cluster: `kind create cluster --config kind-1 --name kind-1`{{execute}}
