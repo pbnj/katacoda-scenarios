@@ -1,1 +1,1 @@
-Let's delete our cluster: `kind delete cluster`{{execute}}
+We can also delete our cluster: `kind delete cluster`{{execute}}
