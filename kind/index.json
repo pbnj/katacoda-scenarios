@@ -1,0 +1,24 @@
+{
+  "title": "Kind",
+  "description": "Explore Kubernetes-in-Docker and learn how to run local Kubernetes clusters using Docker containers as nodes",
+  "details": {
+    "steps": [
+      { "title": "Set Up our Environment", "text": "step1.md" },
+      { "title": "Create a Cluster", "text": "step2.md" },
+      { "title": "Delete a Cluster", "text": "step3.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
