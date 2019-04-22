@@ -11,4 +11,4 @@ kind consists of:
 
 kind bootstraps each “node” with [`kubeadm`](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/).
 
-For more details, see the [docs](https://kind.sigs.k8s.io)
+For more details, see the [docs](https://kind.sigs.k8s.io).

@@ -1,6 +1,6 @@
 # install deps# 
 ## go (via https://github.com/travis-ci/gimme)
-eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.12.4 bash)"
+eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=stable bash)"
 
 ## docker should already be installed on katacoda ubuntu image
 docker version
