@@ -2,7 +2,7 @@ As you may have noticed, `kind create cluster`, by default, created a single-nod
 
 What if we want a multi-node cluster, say 1 control-plane node and 3 worker nodes?
 
-Well, `kind` allows us to configure our clusters via a YAML configuration file.
+Well, `kind` allows us to configure our clusters.
 
 Let's define our cluster:
 
@@ -18,4 +18,6 @@ nodes:
 EOF
 ```{{execute}}
 
-Now, let's create our cluster: `kind create cluster --config kind-1 --name kind-1`{{execute}}
+Now, we can pass this config file to the create our desired cluster (and give it a custom name):
+
+`kind create cluster --config kind-1 --name kind-1`{{execute}}
