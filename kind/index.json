@@ -5,7 +5,9 @@
     "steps": [
       { "title": "Set Up our Environment", "text": "step1.md" },
       { "title": "Create a Cluster", "text": "step2.md" },
-      { "title": "Delete a Cluster", "text": "step3.md" }
+      { "title": "Delete a Cluster", "text": "step3.md" },
+      { "title": "Multi-Node Cluster", "text": "step4.md" },
+      { "title": "HA Cluster", "text": "step5.md" }
     ],
     "intro": {
       "text": "intro.md",
