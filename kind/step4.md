@@ -42,6 +42,8 @@ kubeadmConfigPatches:
 EOF
 ```{{execute}}
 
+Then, let's use Calico's YAML for our demo purposes: `curl -LO https://docs.projectcalico.org/v3.6/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml`{{execute}}
+
 Now, we can pass this config file to the create our desired cluster (and give it a custom name):
 
 `kind create cluster --config kind-1 --name kind-1`{{execute}}
