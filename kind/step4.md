@@ -20,8 +20,6 @@ nodes:
     readOnly: true
     type: File
 - role: control-plane
-- role: control-plane
-- role: worker
 - role: worker
 - role: worker
 kubeadmConfigPatches:
@@ -31,7 +29,6 @@ kubeadmConfigPatches:
   metadata:
     name: config
   networking:
-    serviceSubnet: "10.96.0.1/12"
     podSubnet: "192.168.0.0/16"
 - |
   apiVersion: kubeproxy.config.k8s.io/v1alpha1
