@@ -1,8 +1,10 @@
 As you may have noticed, `kind create cluster`, by default, created a single-node cluster.
 
-What if we want a multi-node cluster, say 1 control-plane node and 3 worker nodes?
+What if we want an HA cluster, say 3 control-plane node and 3 worker nodes?
 
-Well, `kind` allows us to configure our clusters.
+What if we also want a custom CNI?
+
+Well, `kind` allows us to configure our clusters using its `v1alpha3` api group.
 
 Let's define our cluster:
 
@@ -12,9 +14,31 @@ kind: Cluster
 apiVersion: kind.sigs.k8s.io/v1alpha3
 nodes:
 - role: control-plane
+  extraMounts:
+  - containerPath: /kind/manifests/default-cni.yaml
+    hostPath: /root/calico.yaml
+    readOnly: true
+    type: File
+- role: control-plane
+- role: control-plane
 - role: worker
 - role: worker
 - role: worker
+kubeadmConfigPatches:
+- |
+  apiVersion: kubeadm.k8s.io/v1beta1
+  kind: ClusterConfiguration
+  metadata:
+    name: config
+  networking:
+    serviceSubnet: "10.96.0.1/12"
+    podSubnet: "192.168.0.0/16"
+- |
+  apiVersion: kubeproxy.config.k8s.io/v1alpha1
+  kind: KubeProxyConfiguration
+  metadata:
+    name: config
+  mode: "ipvs"
 EOF
 ```{{execute}}
 
@@ -28,4 +52,4 @@ Once the cluster has been created, export the new `KUBECONFIG`:
 
 And, poke around the cluster: `kubectl get all --all-namespaces`{{execute}}
 
-Neat! Let's see what else we can do!
+Neat!
