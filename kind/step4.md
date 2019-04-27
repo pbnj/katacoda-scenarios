@@ -21,3 +21,11 @@ EOF
 Now, we can pass this config file to the create our desired cluster (and give it a custom name):
 
 `kind create cluster --config kind-1 --name kind-1`{{execute}}
+
+Once the cluster has been created, export the new `KUBECONFIG`: 
+
+`export KUBECONFIG="$(kind get kubeconfig-path --name="kind-1")"`{{execute}}
+
+And, poke around the cluster: `kubectl get all --all-namespaces`{{execute}}
+
+Neat! Let's see what else we can do!
