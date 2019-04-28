@@ -5,7 +5,7 @@ Once the cluster has started, we will need a more recent version of [`kubectl`](
 ```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.0/bin/linux/amd64/kubectl \
 	&& chmod +x ./kubectl
-````{{execute}}
+```{{execute}}
 
 And we will need to install `kboom` plugin:
 
