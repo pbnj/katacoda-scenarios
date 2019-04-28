@@ -4,6 +4,6 @@ Now, let's install `kboom` plugin:
 
 ```
 curl https://raw.githubusercontent.com/mhausenblas/kboom/master/kboom -o kubectl-kboom \
-&& chmod +x ./kubectl-kboom \
-&& mv ./kubectl-kboom /usr/local/bin
+	&& chmod +x ./kubectl-kboom \
+	&& mv ./kubectl-kboom /usr/local/bin
 ```{{execute}}

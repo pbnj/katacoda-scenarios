@@ -8,7 +8,7 @@ Then, apply the service account and RBAC policies:
 
 ```
 curl -LO https://raw.githubusercontent.com/mhausenblas/kboom/master/permissions.yaml \
-&& kubectl apply -f permissions.yaml
+	&& kubectl apply -f permissions.yaml
 ```{{execute}}
 
 Now, that we're all set up, let's learn how to use `kboom`.
