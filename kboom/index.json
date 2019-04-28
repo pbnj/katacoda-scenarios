@@ -22,7 +22,7 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "launch.sh"
+      "code": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
