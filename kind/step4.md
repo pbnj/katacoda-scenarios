@@ -9,7 +9,7 @@ Well, `kind` allows us to configure our clusters using its `v1alpha3` api group.
 Let's define our cluster:
 
 ```
-cat <<EOF > kind-1
+cat <<EOF > kind-ha
 kind: Cluster
 apiVersion: kind.sigs.k8s.io/v1alpha3
 nodes:
@@ -20,8 +20,6 @@ nodes:
     readOnly: true
     type: File
 - role: control-plane
-- role: control-plane
-- role: worker
 - role: worker
 - role: worker
 kubeadmConfigPatches:
@@ -31,7 +29,6 @@ kubeadmConfigPatches:
   metadata:
     name: config
   networking:
-    serviceSubnet: "10.96.0.1/12"
     podSubnet: "192.168.0.0/16"
 - |
   apiVersion: kubeproxy.config.k8s.io/v1alpha1
@@ -46,11 +43,11 @@ Then, let's use Calico's YAML for our demo purposes: `curl -LO https://docs.proj
 
 Now, we can pass this config file to the create our desired cluster (and give it a custom name):
 
-`kind create cluster --config kind-1 --name kind-1`{{execute}}
+`kind create cluster --config kind-ha --name kind-ha`{{execute}}
 
 Once the cluster has been created, export the new `KUBECONFIG`: 
 
-`export KUBECONFIG="$(kind get kubeconfig-path --name="kind-1")"`{{execute}}
+`export KUBECONFIG="$(kind get kubeconfig-path --name="kind-ha")"`{{execute}}
 
 And, poke around the cluster: `kubectl get all --all-namespaces`{{execute}}
 
