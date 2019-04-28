@@ -9,3 +9,5 @@ In this example, we will create 10 pods with a 14-second timeout:
 `./kubectl kboom generate --mode=scale:14 --load=pods:10`{{execute}}
 
 To view the results, you may invoke the `results` subcommand as often as you like: `./kubectl kboom results`{{execute}}
+
+Or `watch ./kubectl kboom results`{{execute}} 
