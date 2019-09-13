@@ -9,4 +9,4 @@ Velero consists of:
 - A server that runs on your cluster
 - A command-line client that runs locally
 
-For more information, [the documentation](https://heptio.github.io/velero/v0.11.0/) provides a getting started guide, plus information about building from source, architecture, extending Velero, and more.
+For more information, [the documentation](https://velero.io/docs/v1.1.0/) provides a getting started guide, plus information about building from source, architecture, extending Velero, and more.
