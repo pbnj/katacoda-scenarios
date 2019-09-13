@@ -9,3 +9,9 @@ After a successful restore, the STATUS column is Completed, and WARNINGS and ERR
 If there are errors or warnings, you can look at them in detail:
 
 `velero restore describe <RESTORE_NAME>`
+
+You can verify that the nginx resources are available again:
+
+`kubectl get services --namespace=nginx-example`{{execute}}
+
+`kubectl get namespace/nginx-example`{{execute}}

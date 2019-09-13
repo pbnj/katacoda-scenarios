@@ -1,4 +1,8 @@
-Let's backup any resource with labels "app=nginx": `velero backup create nginx-backup --selector app=nginx`{{execute}}
+Let's backup any resource with labels "app=nginx":
+`velero backup create nginx-backup --selector app=nginx`{{execute}}
+
+Verify if the backup has completed
+`velero backup describe nginx-backup`{{execute}}
 
 Now, let's simulate a disaster: `kubectl delete namespace nginx-example`{{execute}}
 
@@ -12,4 +16,4 @@ Check that the nginx service and deployment are gone:
 
 You should get no results.
 
-NOTE: You might need to wait for a few minutes for the namespace to be fully cleaned up.
+**NOTE:** You might need to wait for a few minutes for the namespace to be fully cleaned up.
