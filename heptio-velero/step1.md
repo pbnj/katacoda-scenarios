@@ -1,10 +1,37 @@
 Let's pull down the Heptio Velero GitHub repo to help us get started: `git clone https://github.com/heptio/velero`{{execute}}
 
-Apply some basic prerequisites (e.g. CustomResourceDefinitions, namespaces, and RBAC): `kubectl apply -f velero/examples/common/00-prereqs.yaml`{{execute}}
+Let's download and install the Velero client:
+`curl -LO https://github.com/heptio/velero/releases/download/v1.1.0/velero-v1.1.0-linux-amd64.tar.gz`{{execute}}
 
-Apply a local storage service (e.g. Minio): `kubectl apply -f velero/examples/minio/`{{execute}}
+`tar -C /usr/local/bin -xzvf velero-v1.1.0-linux-amd64.tar.gz`{{execute}}
 
-Deploy an example nginx application: `kubectl apply -f velero/examples/nginx-app/base.yaml`{{execute}}
+Add velero directory to PATH
+`export PATH=$PATH:/usr/local/bin/velero-v1.1.0-linux-amd64/`{{execute}}
+
+Create a Velero-specific credentials file (`credentials-velero`) in your local directory:
+
+```
+echo "[default]
+aws_access_key_id = minio
+aws_secret_access_key = minio123" > credentials-velero
+```{{execute}}
+
+Start the server and the local storage service:
+
+`kubectl apply -f velero/examples/minio/00-minio-deployment.yaml`{{execute}}
+
+```velero install \
+    --provider aws \
+    --bucket velero \
+    --secret-file ./credentials-velero \
+    --use-volume-snapshots=false \
+    --backup-location-config region=minio,s3ForcePathStyle="true",s3Url=http://minio.velero.svc:9000
+```{{execute}}
+
+This example assumes that it is running within a local cluster without a volume provider capable of snapshots, so no `VolumeSnapshotLocation` is created (`--use-volume-snapshots=false`).
+
+Deploy an example nginx application:
+`kubectl apply -f velero/examples/nginx-app/base.yaml`{{execute}}
 
 Check to see that both Velero and nginx deployments have been successfully created:
 
